@@ -1,5 +1,6 @@
 ﻿using hospital_prioritization;
 using System.Collections.Generic;
+using System.Linq;
 
 public class HospitalPrioritySystem
 {
@@ -40,7 +41,7 @@ public class HospitalPrioritySystem
         patients.AddLast(newPatient);
     }
 
-    public Patient ServePatient()
+    public Patient? ServePatient()
     {
         if (patients.Count == 0) return null;
 
@@ -48,9 +49,8 @@ public class HospitalPrioritySystem
         patients.RemoveFirst();
         return served;
     }
-
-    public IEnumerable<Patient> GetQueue()
+    public List<Patient> GetPatients()
     {
-        return patients;
+        return patients.ToList();
     }
 }
