@@ -2,7 +2,20 @@ using hospital_prioritization;
 using System.Collections.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 HospitalPrioritySystem hospital = new HospitalPrioritySystem();
 
@@ -25,15 +38,7 @@ app.MapGet("/serve", () =>
 app.MapGet("/list", () =>
 {
     var list = hospital.GetPatients();
-
-    if (list.Count == 0)
-        return "No patients waiting.";
-
-    string output = "Current Queue:\n";
-    foreach (var p in list)
-        output += $"{p.Name} — Severity {p.Severity} — Order {p.ArrivalOrder}\n";
-
-    return output;
+    return Results.Json(list);
 });
 
 app.Run();
