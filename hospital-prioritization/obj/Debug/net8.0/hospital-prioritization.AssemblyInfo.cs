@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("hospital-prioritization")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+415826431efcfdb7a489acae32605bb390ae8cc2")]
 [assembly: System.Reflection.AssemblyProductAttribute("hospital-prioritization")]
 [assembly: System.Reflection.AssemblyTitleAttribute("hospital-prioritization")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
