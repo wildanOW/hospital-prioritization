@@ -3,7 +3,7 @@ const API_URL = 'http://localhost:5199';
 async function addPatient() {
     const name = document.getElementById('name').value;
     const severity = document.getElementById('severity').value;
-
+    
     if (!name || !severity) {
         alert('Please enter both name and severity');
         return;
@@ -19,11 +19,9 @@ async function addPatient() {
         const result = await response.text();
         alert(result);
         
-        // Clear inputs
         document.getElementById('name').value = '';
         document.getElementById('severity').value = '';
         
-        // Refresh queue
         await loadQueue();
     } catch (error) {
         alert('Error adding patient: ' + error.message);
@@ -36,7 +34,6 @@ async function servePatient() {
         const result = await response.text();
         alert(result);
         
-        // Refresh queue
         await loadQueue();
     } catch (error) {
         alert('Error serving patient: ' + error.message);
@@ -63,7 +60,6 @@ async function loadQueue() {
     }
 }
 
-// O(1) Patient Lookup Function
 async function lookupPatient() {
     const patientId = document.getElementById('patientId').value.trim();
     const resultDiv = document.getElementById('lookupResult');
@@ -98,5 +94,5 @@ async function lookupPatient() {
     }
 }
 
-// Load queue on page load
+
 window.onload = loadQueue;
