@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Queue</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="home.html" class="nav-brand">🏥 Hospital System</a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="manage.html">Manage</a>
+                <a href="search.html">Search</a>
+                <a href="queue.html" class="active">Queue</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Current Patient Queue</h1>
+
+    <div class="container">
+        <h2>Priority Queue</h2>
+        <table id="queueTable">
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Name</th>
+                    <th>Severity</th>
+                    <th>Order</th>
+                </tr>
+            </thead>
+            <tbody id="queueBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Patient</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">🏥 Hospital System</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="manage.html">Manage</a>
+                <a href="search.html" class="active">Search</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Search Patient</h1>
+
+    <div class="container">
+        <h2>Search Patient with ID</h2>
+        <input id="patientId" type="number" placeholder="Enter Patient ID">
+        <button onclick="lookupPatient()">Search Patient</button>
+        <div id="lookupResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

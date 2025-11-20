@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" width="400" height="340">
+  <!-- Background gradient beige -->
+  <rect width="400" height="340" fill="#f5f1e8"/>
+  
+  <!-- Search icon -->
+  <circle cx="200" cy="80" r="35" fill="#4A9FD8" opacity="0.9"/>
+  <circle cx="200" cy="80" r="25" fill="#6BB8E8" opacity="0.8"/>
+  <rect x="218" y="98" width="25" height="12" fill="#7B68B0" rx="6" transform="rotate(45 230 104)"/>
+  
+  <!-- Text: SEARCH PATIENT -->
+  <text x="200" y="180" font-family="'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="32" font-weight="600" fill="#00a870" text-anchor="middle" letter-spacing="1">SEARCH PATIENT</text>
+  
+  <!-- Subtext: Quick O(1) patient lookup by ID -->
+  <text x="200" y="215" font-family="'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="400" fill="#4b5563" text-anchor="middle">Quick O(1) patient lookup by ID</text>
+  
+  <!-- Search Now button -->
+  <rect x="135" y="245" width="130" height="45" rx="8" fill="#00a870"/>
+  <text x="200" y="273" font-family="'Circular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Search Now</text>
+</svg>

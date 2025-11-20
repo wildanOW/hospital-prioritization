@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Patients</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">🏥 Hospital System</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="manage.html" class="active">Manage</a>
+                <a href="search.html">Search</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1>Manage Patients & Queue</h1>
+
+    <div class="main-layout">
+        <div class="left-panel">
+            <div class="panel-card">
+                <h2>Add Patient</h2>
+                <input id="name" type="text" placeholder="Patient Name">
+                <input id="severity" type="number" placeholder="Severity (1-10)">
+                <button onclick="addPatient()">Add Patient</button>
+            </div>
+
+            <div class="panel-card">
+                <h2>Serve Next Patient</h2>
+                <button onclick="servePatient()">Serve</button>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="panel-card queue-panel">
+                <h2>Current Queue</h2>
+                <table id="queueTable">
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Severity</th>
+                            <th>Order</th>
+                        </tr>
+                    </thead>
+                    <tbody id="queueBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
