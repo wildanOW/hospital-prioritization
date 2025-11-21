@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Priority System - Home</title>
+    <link rel="stylesheet" href="home-style.css">
+</head>
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <h1 class="main-title">Hospital Priority System</h1>
+            <p class="subtitle">Efficient Patient Management & Emergency Prioritization</p>
+            
+            <div class="features-grid">
+                <div class="feature-card" onclick="window.location.href='manage.html'">
+                    <div class="icon">🏥</div>
+                    <h2>Manage Patients</h2>
+                    <p>Add new patients, serve patients, and view the priority queue</p>
+                    <button class="card-button">Go to Management</button>
+                </div>
+                
+                <div class="feature-card" onclick="window.location.href='search.html'">
+                    <div class="icon">🔍</div>
+                    <h2>Search Patient</h2>
+                    <p>Lookup patients with ID</p>
+                    <button class="card-button">Search Now</button>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h3>System Features</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-icon">⚡</span>
+                        <span>O(1) Hash-based Patient Lookup</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🎯</span>
+                        <span>Priority Queue Management</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📈</span>
+                        <span>Severity-based Prioritization</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">🔢</span>
+                        <span>FIFO for Equal Severity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
