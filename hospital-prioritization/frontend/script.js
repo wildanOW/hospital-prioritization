@@ -9,8 +9,8 @@ async function addPatient() {
         return;
     }
 
-    if (severity < 1 || severity > 10) {
-        alert('Severity must be between 1 and 10');
+    if (severity < 1 || severity > 3) {
+        alert('Severity must be between 1 and 3');
         return;
     }
 

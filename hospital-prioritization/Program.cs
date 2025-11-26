@@ -16,10 +16,10 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 app.UseCors("AllowAll");
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 HospitalPrioritySystem hospital = new HospitalPrioritySystem();
-
-app.MapGet("/", () => "Hospital Prioritization API is running!");
 
 app.MapGet("/add", (string name, int severity) =>
 {
@@ -39,6 +39,14 @@ app.MapGet("/list", () =>
 {
     var list = hospital.GetPatients();
     return Results.Json(list);
+});
+
+app.MapGet("/patient/{patientId}", (int patientId) =>
+{
+    var patient = hospital.GetPatientById(patientId);
+    return (patient == null)
+        ? Results.NotFound()
+        : Results.Json(patient);
 });
 
 app.Run();
